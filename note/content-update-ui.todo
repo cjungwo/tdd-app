@@ -1,0 +1,14 @@
+ContentUpdateUI:
+  ☐ All
+  ☐ Analysis Requirements(Statement, Goal ...)
+    content post page
+      title,
+      body,
+      thumbnail
+  ☐ Dev Strategy(Tests, Scenarios, Priorities)
+    copy and paste from content-post
+  ☐ Work List: @must @could @should @won't
+    ✔ content update @done(25-01-17 10:29)
+  ☐ Retrospect
+
+  ☐ Additions
