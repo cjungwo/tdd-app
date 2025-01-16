@@ -1,0 +1,18 @@
+Header UI:
+  ☐ All
+  ☐ Analysis Requirements(Statement, Goal ...)
+    author nickname
+    login toggle
+    user menu (impl x)
+
+  ☐ Dev Strategy(Tests, Scenarios, Priorities)
+    hard coding
+
+  ☐ Work List: @must @could @should @won't
+    ✔ left @done(25-01-13 23:14)
+    ✔ right @done(25-01-13 23:14)
+      ✔ user menu or login link @done(25-01-13 23:15)
+
+  ☐ Retrospect
+
+  ☐ Additions
