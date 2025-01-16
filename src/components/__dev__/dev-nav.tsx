@@ -14,6 +14,10 @@ const links: LinkItem[] = [
         tag: 'Contents',
         href: '/contents',
     },
+    {
+        tag: 'Content Post',
+        href: '/contents/post',
+    },
 ];
 
 export const DevNav = () => {
