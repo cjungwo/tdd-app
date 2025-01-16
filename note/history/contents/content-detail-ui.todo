@@ -1,0 +1,28 @@
+Content Detail:
+  ☐ All
+  ☐ Analysis Requirements(Statement, Goal ...)
+    main
+      title, author.nickname, createAt, body, isAuthor
+      localizeDate();
+
+    author-aside
+      id, nickname, imgUrl
+
+    comment-section
+      isAuthorized
+
+    footer
+
+  ☐ Dev Strategy(Tests, Scenarios, Priorities)
+
+  ☐ Work List: @must @could @should @won't
+    ✔ main @done(25-01-16 21:04)
+      ✔ isAuthor -> true/false @done(25-01-16 21:04)
+      ✔ localizeDate(); @done(25-01-16 21:04)
+
+    ✔ author-aside @done(25-01-16 21:42)
+    ✔ comment-section @done(25-01-16 21:42)
+
+  ☐ Retrospect
+
+  ☐ Additions
