@@ -7,16 +7,20 @@ interface LinkItem {
 
 const links: LinkItem[] = [
     {
-        tag: 'Content Detail',
-        href: '/contents/7d9b2356-0dfe-416c-819b-ec5d1ae6b74a',
-    },
-    {
         tag: 'Contents',
         href: '/contents',
     },
     {
+        tag: 'Content Detail',
+        href: '/contents/7d9b2356-0dfe-416c-819b-ec5d1ae6b74a',
+    },
+    {
         tag: 'Content Post',
         href: '/contents/post',
+    },
+    {
+        tag: 'Content Update',
+        href: '/contents/7d9b2356-0dfe-416c-819b-ec5d1ae6b74a/update',
     },
 ];
 
