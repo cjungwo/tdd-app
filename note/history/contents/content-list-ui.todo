@@ -1,0 +1,19 @@
+ContentListUI:
+  ☐ All
+  ☐ Analysis Requirements(Statement, Goal ...)
+    quary
+    content-list
+      content-item
+    pagination
+
+  ☐ Dev Strategy(Tests, Scenarios, Priorities)
+
+  ☐ Work List: @must @could @should @won't
+    ✔ quary @done(25-01-16 22:19)
+    ✔ content-list @done(25-01-16 22:19)
+      ✔ content-item @done(25-01-16 22:19)
+    ✔ pagination @done(25-01-16 22:19)
+
+  ☐ Retrospect
+
+  ☐ Additions
