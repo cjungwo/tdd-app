@@ -1,0 +1,34 @@
+ContentTDD:
+  ☐ All
+  ☐ Analysis Requirements(Statement, Goal ...)
+  header
+    toggle login -> login btn <--> user menu
+    author.nickname 
+
+  main
+    title, author.nickname, createdAt, body
+
+  author-aside
+    author.imgUrl, author.nickname
+  
+  isAutorized
+
+  ☐ Dev Strategy(Tests, Scenarios, Priorities)
+    pure/unpure function - atomic test
+    whole page - deal with exceptions until success
+
+  ☐ Work List: @must @could @should @won't
+    ☐ login x -> show login btn
+    ☐ login o -> show user menu
+    ☐ {author.nickname}'s Blog
+    ☐ main
+      ☐ title, author.nickname, createdAt, body
+    ☐ author-aside
+      ☐ author.imgUrl, author.nickname
+    ☐ comment-section
+      ☐ login x -> click textarea -> redirect /users/sign-in
+      ☐ login 0 -> not redirect
+
+  ☐ Retrospect
+
+  ☐ Additions
