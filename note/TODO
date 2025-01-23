@@ -1,6 +1,8 @@
 ContentTDD:
   ☐ All
   ☐ Analysis Requirements(Statement, Goal ...)
+  is content not exist -> redirect /contents 
+
   header
     toggle login -> login btn <--> user menu
     author.nickname 
@@ -18,9 +20,14 @@ ContentTDD:
     whole page - deal with exceptions until success
 
   ☐ Work List: @must @could @should @won't
-    ☐ login x -> show login btn
-    ☐ login o -> show user menu
-    ☐ {author.nickname}'s Blog
+    ☐ guard
+      ☐ if content not exist -> redirect to /contents
+      
+    ☐ header
+      ☐ login x -> show login btn
+      ☐ login o -> show user menu
+      ☐ {author.nickname}'s Blog
+
     ☐ main
       ☐ title, author.nickname, createdAt, body
     ☐ author-aside
