@@ -9,7 +9,8 @@ interface Props {
 }
 
 export const ContentsMain = (props: Props) => {
-   return <main className={clsx(layoutStyles.mx, props.className)}>
+   return (
+   <main className={clsx(layoutStyles.mx, props.className)}>
     <div className='flex items-center justify-center'>
         <select name="sort" id="sort" className='bg-neutral-800 px-2 py-1 rounded'>
             <option value="created-at-desc">Date</option>
@@ -41,5 +42,6 @@ export const ContentsMain = (props: Props) => {
             </button>
         ))}
     </div>
-   </main>;
+   </main>
+   );
 };
