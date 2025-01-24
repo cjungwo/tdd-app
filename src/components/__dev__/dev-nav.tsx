@@ -15,6 +15,10 @@ const links: LinkItem[] = [
         href: '/contents/7d9b2356-0dfe-416c-819b-ec5d1ae6b74a',
     },
     {
+        tag: 'Content Detail void',
+        href: '/contents/f570f800-da65-4031-a240-d1cff262dd95',
+    },
+    {
         tag: 'Content Post',
         href: '/contents/post',
     },
