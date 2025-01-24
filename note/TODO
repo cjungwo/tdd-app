@@ -20,13 +20,13 @@ ContentTDD:
     whole page - deal with exceptions until success
 
   ☐ Work List: @must @could @should @won't
-    ☐ guard
-      ☐ if content not exist -> redirect to /contents
+    ✔ guard @done(25-01-24 11:05)
+      ✔ if content not exist -> redirect to /contents @done(25-01-24 11:05)
       
-    ☐ header
-      ☐ login x -> show login btn
-      ☐ login o -> show user menu
-      ☐ {author.nickname}'s Blog
+    ✔ header @done(25-01-24 11:05)
+      ✔ login x -> show login btn @done(25-01-24 11:05)
+      ✔ login o -> show user menu @done(25-01-24 11:05)
+      ✔ {author.nickname}'s Blog @done(25-01-24 11:05)
 
     ☐ main
       ☐ title, author.nickname, createdAt, body
