@@ -28,9 +28,9 @@ export default async function ContentDetail({
          contentAuthorNickname={response.data.content.author.nickname}
          user={user} 
       />
-      <ContentDetailMain />
-      <ContentDetailAuthorAside />
-      <ContentDetailCommentSection />
+      <ContentDetailMain content={response.data.content} />
+      <ContentDetailAuthorAside author={response.data.content.author} />
+      <ContentDetailCommentSection isAuthorized={!!user} />
       <Footer />
    </>;
 };

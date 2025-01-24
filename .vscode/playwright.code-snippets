@@ -15,7 +15,7 @@
         "scope": "typescript",
         "prefix": "ptest",
         "description": "add test line",
-        "body": ["test('$1', async ({ page, content }) => {$0})"]
+        "body": ["test('$1', async ({ page, context }) => {$0})"]
     },
     "step": {
         "scope": "typescript",

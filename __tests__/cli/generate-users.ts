@@ -6,7 +6,7 @@ import { list } from "radashi"
 const main = (len: number) => {
     const instance = list(0, len - 1).map(() => gen.user.instance());
     
-    const str = objectToString(instance)
+    const str = objectToString(instance);
     console.log(str);
 }
 

@@ -28,13 +28,13 @@ ContentTDD:
       ✔ login o -> show user menu @done(25-01-24 11:05)
       ✔ {author.nickname}'s Blog @done(25-01-24 11:05)
 
-    ☐ main
-      ☐ title, author.nickname, createdAt, body
-    ☐ author-aside
-      ☐ author.imgUrl, author.nickname
-    ☐ comment-section
-      ☐ login x -> click textarea -> redirect /users/sign-in
-      ☐ login 0 -> not redirect
+    ✔ main @done(25-01-24 15:42)
+      ✔ title, author.nickname, createdAt, body @done(25-01-24 15:42)
+    ✔ author-aside @done(25-01-24 15:52)
+      ✔ author.imgUrl, author.nickname @done(25-01-24 15:52)
+    ✔ comment-section @done(25-01-24 16:07)
+      ✔ login x -> click textarea -> redirect /users/sign-in @done(25-01-24 16:07)
+      ✔ login 0 -> not redirect @done(25-01-24 16:07)
 
   ☐ Retrospect
 
