@@ -1,3 +1,4 @@
+import { contentFixtures } from '@__tests__/fixtures/content-fixture';
 import Link from 'next/link';
 
 interface LinkItem {
@@ -12,7 +13,7 @@ const links: LinkItem[] = [
     },
     {
         tag: 'Content Detail',
-        href: '/contents/7d9b2356-0dfe-416c-819b-ec5d1ae6b74a',
+        href: `/contents/${contentFixtures[0].id}`,
     },
     {
         tag: 'Content Detail void',
@@ -24,7 +25,7 @@ const links: LinkItem[] = [
     },
     {
         tag: 'Content Update',
-        href: '/contents/7d9b2356-0dfe-416c-819b-ec5d1ae6b74a/update',
+        href: `/contents/${contentFixtures[0].id}/update`,
     },
 ];
 
