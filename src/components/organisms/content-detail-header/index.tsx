@@ -9,9 +9,10 @@ interface Props {
    user?: {
     nickname: string;
    };
+   contentAuthorNickname: string;
 }
 
-export const Header = (props: Props) => {
+export const ContentDetailHeader = (props: Props) => {
    return (
    <div className={clsx(
             'flex justify-between h-16', 
@@ -29,6 +30,13 @@ export const Header = (props: Props) => {
                 alt='home'
                 className='mr-2'
             />
+        </Link>
+        <Link 
+            href='/users/5e6e9efb-daf4-4f66-af85-0f24d22a7c08' 
+            aria-label={`${props.contentAuthorNickname} - home`}
+        >
+            <span>{props.contentAuthorNickname}</span>
+            <span>{'\'s Blog'}</span>
         </Link>
     </div>
     <div className='flex items-center'>

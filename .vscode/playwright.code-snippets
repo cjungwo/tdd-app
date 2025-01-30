@@ -15,13 +15,13 @@
         "scope": "typescript",
         "prefix": "ptest",
         "description": "add test line",
-        "body": ["test('$1', async ({ page, context }) => {$0})"]
+        "body": ["test('$1', async ({ page, context }) => {$0});"]
     },
     "step": {
         "scope": "typescript",
         "prefix": "pstep",
         "description": "add step line",
-        "body": ["await test.step('$1', async () => {$0})"]
+        "body": ["await test.step('$1', async () => {$0});"]
     },
     "init vitest": {
         "scope": "typescript",
@@ -39,7 +39,7 @@
             "",
             "export class Helper extends BaseHelper {",
             "   constructor(page: Page, context: BrowserContext) {",
-            "       super(page, context)",
+            "       super(page, context);",
             "   }",
             "}",
             ""

@@ -1,4 +1,4 @@
-ContentTDD:
+content-detail-tdd:
   ☐ All
   ☐ Analysis Requirements(Statement, Goal ...)
   is content not exist -> redirect /contents 

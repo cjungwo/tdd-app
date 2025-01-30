@@ -11,8 +11,8 @@ ContentUI:
     - Simple & Atomic Design
 
   ☐ Work List: @must @could @should @won't
-    ☐ Detail Page @started(25-01-13 22:41)
-    ☐ Listing Page
+    ✔ Detail Page @started(25-01-13 22:41) @done(25-01-30 13:12) @lasted(2w2d14h31m52s)
+    ✔ Listing Page @done(25-01-30 13:13)
     ☐ Post Page
     ☐ Update Page
 
