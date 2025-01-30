@@ -1,0 +1,37 @@
+content-list-tdd:
+  ☐ All
+  ☐ Analysis Requirements(Statement, Goal ...)
+    contents view - pagination, sorting, searching 
+
+  ☐ Dev Strategy(Tests, Scenarios, Priorities)
+    order by dependency
+      pagination -> sort -> search
+
+  ☐ Work List: @must @could @should @won't
+    ✔ header @done(25-01-26 09:06)
+      ✔ shared-test @done(25-01-26 09:06)
+    ✔ update data for test @done(25-01-26 11:13)
+      ✔ 14 content fixtures @done(25-01-26 11:13)
+      ✔ [1] date @done(25-01-26 11:13)
+      ✔ [2] order by title asc @done(25-01-26 11:13)
+
+    ✔ pagination @done(25-01-26 11:33)
+      ✔ pages @done(25-01-26 11:28)
+        init -> 2 pages
+        search unique title -> find 1 item and 1 page
+      ✔ pageLoc @done(25-01-26 11:33)
+        init -> page1 is selected
+        click page2 -> page2 is selected
+
+    ✔ content-item @done(25-01-30 13:07)
+      ✔ pagination @done(25-01-30 11:19)
+        page1 has 12 items and page2 has 2 items
+      ✔ sort @done(25-01-30 12:21)
+        ✔ title -> test to title of first item @done(25-01-30 12:21)
+        ✔ date -> item2 go up to first item @done(25-01-30 12:21)
+      ✔ search @done(25-01-30 13:06)
+        unique part of title -> find one item
+
+  ☐ Retrospect
+
+  ☐ Additions
