@@ -1,44 +1,93 @@
+'use client';
+
 import { ContentItem } from '@/components/molecules/content-item';
+import { useInputText } from '@/hooks/use-input-text';
 import { layoutStyles } from '@/styles/layout-styles';
 import clsx from 'clsx';
-import { list } from 'radashi';
 import { HiSearch } from 'react-icons/hi';
+import { usePages } from './hooks/use-pages';
+import { FormEventHandler } from 'react';
+import { usePageLoc } from './hooks/use-page-loc';
+import { useContentItems } from './hooks/use-content-items';
+import { useSelect } from '@/hooks/use-select';
+import { contentSortOption } from '@/domains/content/content.constant';
+import { pageTake } from './constant';
 
 interface Props {
    className?: string;
 }
 
 export const ContentsMain = (props: Props) => {
+    const { select: sort, onChange: onChangeSort } = useSelect({
+        init: contentSortOption.createdAtDesc,
+        options: contentSortOption,
+        base: contentSortOption.createdAtDesc,
+    });
+    const { text: search, onChange: onChangeSearch } = useInputText("");
+    const { pages, onSubmit: onSubmitPage } = usePages();
+    const { pageLoc, onClickPage, onSubmit: onSubmitPageLoc } = usePageLoc();
+    const { items, onSubmit: onSubmitContentItems } = useContentItems(
+        pageLoc, 
+        sort
+    );  
+
+    const onSubmit: FormEventHandler<HTMLFormElement> = async (ev) => {
+        ev.preventDefault();
+        await onSubmitPage(search);
+        await onSubmitContentItems({
+            search,
+            pageTake,
+            pageLoc,
+            sort,
+        });
+        onSubmitPageLoc();
+    }
+
    return (
    <main className={clsx(layoutStyles.mx, props.className)}>
-    <div className='flex items-center justify-center'>
-        <select name="sort" id="sort" className='bg-neutral-800 px-2 py-1 rounded'>
-            <option value="created-at-desc">Date</option>
-            <option value="title-asc">Title</option>
+    <form className='flex items-center justify-center' onSubmit={onSubmit}>
+        <select 
+            aria-label='sort' 
+            name="sort" 
+            id="sort" 
+            className='bg-neutral-800 px-2 py-1 rounded'
+            onChange={onChangeSort}
+            value={sort}
+        >
+            <option value={contentSortOption.createdAtDesc}>Date</option>
+            <option value={contentSortOption.titleAsc}>Title</option>
         </select>
         <div className='flex items-center border-b-2 grow ml-4 max-w-96'>
             <input 
                 type="text" 
                 className='bg-transparent outline-none grow px-4 py-1'
+                onChange={onChangeSearch}
+                value={search}
+                aria-label='search'
             />
             <button>
                 <HiSearch className='text-xl' />
             </button>
         </div>
-    </div>
+    </form>
     <div className='grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
-        {list(0, 11).map((c) => (
-            <ContentItem key={c} className='mt-8'/>
+        {items.map((c) => (
+            <ContentItem key={c.id} className='mt-8' {...c} />
         ))}
     </div>
-    <div className='flex justify-center items-center mt-8'>
-        {list(0, 1).map((c) => (
+    <div className='flex justify-center items-center mt-8' data-testid='pagination'>
+        {pages.map((c) => (
             <button 
                 key={c} 
                 className={clsx(
-                    'px-2 py-2 mr-2 last:mr-0 rounded', 
-                    c === 0 && 'bg-neutral-800'
-                )}>{c + 1}
+                    'px-2 py-2 mr-2 last:mr-0 rounded data-[selected=true]:bg-neutral-800', 
+                )}
+                onClick={() => {
+                    onClickPage(c);
+                }}
+                data-selected={c === pageLoc}
+            >
+                    {c}
             </button>
         ))}
     </div>
