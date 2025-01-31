@@ -1,0 +1,33 @@
+content-create-tdd:
+  ☐ All
+  ☐ Analysis Requirements(Statement, Goal ...)
+    content-create-page
+      input title, body, thumbnail
+
+    Form
+      title (2~80)
+      body (0~20000)
+      thumbnail required
+      -> enable submit btn
+    
+    exception
+    e2e x
+  ☐ Dev Strategy(Tests, Scenarios, Priorities)
+
+  ☐ Work List: @must @could @should @won't
+    ☐ binding title and body
+    ☐ thumbnail upload api #### select input image file return route public/
+    ☐ form
+      ☐ title 2~80
+      ☐ body 0~20000
+      ☐ thumbnail required
+      ☐ if all valid, enable submit btn
+    ☐ create
+      ☐ api
+        ☐ if success, return new created content
+        ☐ exception 400, 401
+      ☐ submit
+        ☐ if success, redirect to /contents/{id} -> id === new created content's id
+  ☐ Retrospect
+
+  ☐ Additions
